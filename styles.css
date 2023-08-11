@@ -1,0 +1,10 @@
+body {
+  text-align: center;
+}
+
+label,
+input,
+button {
+  display: inline-block;
+  margin-top: 20px;
+}
