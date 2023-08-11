@@ -46,7 +46,7 @@ function checkGuess(event) {
   remainingAttempts--;
 
   if (remainingAttempts === 0 || gameEnded) {
-    resultMessage.textContent += ` Komputer memilih angka ${computer}.`;
+    resultMessage.textContent += ` Anda memilih angka ${computer}.`;
     submitButton.textContent = "Try Again";
     submitButton.removeEventListener("click", checkGuess);
     submitButton.addEventListener("click", resetGame);
