@@ -27,7 +27,7 @@ function checkGuess(event) {
   const inputValue = parseInt(numberInput.value);
 
   if (inputValue === computer) {
-    resultMessage.textContent = `Selamat tebakan Anda Benar. Komputer memilih angka ${computer}.`;
+    resultMessage.textContent = `Selamat tebakan Anda Benar.`;
     gameEnded = true;
   } else {
     resultMessage.textContent = `${hasil()}. Sisa kesempatan: ${remainingAttempts - 1}`;
@@ -46,7 +46,7 @@ function checkGuess(event) {
   remainingAttempts--;
 
   if (remainingAttempts === 0 || gameEnded) {
-    resultMessage.textContent += ` Anda memilih angka ${computer}.`;
+    resultMessage.textContent += ` Komputer memilih angka ${computer}.`;
     submitButton.textContent = "Try Again";
     submitButton.removeEventListener("click", checkGuess);
     submitButton.addEventListener("click", resetGame);
